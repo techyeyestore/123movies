@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="1 days">
+<meta http-equiv="content-language" content="en"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+<link rel="shortcut icon" href="/images/group_1/theme_7/favicon.png" type="image/x-icon"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://123moviesite.one/movies"/>
+<meta property="og:title"
+      content=""/>
+<meta property="og:image" content="https://123moviesite.one/images/group_1/theme_7/capture.jpg?v=0.3"/>
+<meta property="og:image:width" content="650">
+<meta property="og:image:height" content="350">
+<meta property="og:description" content=""/>
+<!--Begin: Stylesheet-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.css"
+      integrity="sha512-ZsHJliDVkFVbmwvOjSlsp9NhO+8Lu+qDAg0JVuXGQmh9RBgf8z1IT6tytgYVl8b6hAHUNkuhbqLFuXOkZ0VNvw=="
+      crossorigin="anonymous"/>
+<link rel="stylesheet" href="/css/group_1/theme_7/style.min.css?v=0.8">
+<!--End: Stylesheet-->
+
+<style>
+    
+		.counter-container {
+			text-align: center;
+            display: flex;
+			align-items: center;
+			justify-content: center;
+            flex-direction: column;
+			height: 100vh;
+			margin: 0;
+		}
+
+		#button {
+			padding: 10px 20px;
+			background-color: #3498db;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: not-allowed;
+		}
+
+		#button.active {
+			cursor: pointer;
+			background-color: #2ecc71;
+		}
+
+		#timer {
+			font-size: 24px;
+			font-weight: bold;
+			margin-top: 20px;
+		}
+</style>
+</head>
+<body>
+
+<div id="app">
+    <div id="sidebar_menu_bg"></div>
+
+
+    <div id="wrapper">
+        <div id="header">
+    <div class="container">
+        <div id="mobile_menu"><i class="fa fa-bars"></i></div>
+        <a href="/" id="logo" title="123MovieSite One">
+            <img src="/images/group_1/theme_7/logo.png" alt="Logo">
+            
+                <span>123MovieSite One</span>
+            
+        </a>
+        <!--Begin: Menu-->
+        <div id="header_menu">
+            <ul class="nav header_menu-list">
+                <li class="nav-item"><a href="/" title="Home">Home</a></li>
+                
+                <li class="nav-item"><a href="/movies" title="Movies">Movies</a></li>
+                <li class="nav-item"><a href="/tv-shows" title="TV Shows">TV Shows</a></li>
+                <li class="nav-item"><a href="/top-imdb" title="Top IMDB">Top IMDB</a></li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <!--End: Menu-->
+        <div id="header_right">
+            <div id="search">
+                <div class="search-content">
+                    <form class="search-form">
+                        <div class="search-icon"><i class="fa fa-search"></i></div>
+                        <input type="text" class="form-control search-input" autocomplete="off"
+                               name="keyword" placeholder="Enter keywords...">
+                    </form>
+                    <div class="nav search-result-pop search-suggest"></div>
+                </div>
+            </div>
+            <div id="user-slot"></div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<!-- my code -->
+        
+
+
+
+	
+
+
+	<div class="counter-container">
+		<button id="button" disabled>Click here to access</button>
+		<div id="timer"></div>
+	</div>
+
+	<script>
+		let count = 12; // countdown from 10 seconds
+		let timer = document.getElementById('timer');
+		let button = document.getElementById('button');
+
+		// display initial countdown timer value
+		timer.innerText = `Please wait for ${count} seconds remaining`;
+
+		// start countdown timer
+		let countdown = setInterval(() => {
+			count--;
+			timer.innerText = `Please wait for ${count} seconds remaining`;
+
+			if (count === 0) {
+				clearInterval(countdown);
+				button.classList.add('active');
+				button.removeAttribute('disabled');
+
+				// add click event listener to the button
+				button.addEventListener('click', () => {
+					window.open('/', '_blank');
+				});
+			}
+		}, 1000);
+	</script>
+
+    <!-- my code end -->
+
+
+
+
+
+
+
+
+
+        <div style="text-align:center;margin-bottom: 20px;margin-top:20px;display:none;" id="gift-bottom"></div>
+<div id="footer">
+    <h1 style="display: none;"></h1>
+    <div class="container">
+        <div class="footer-about">
+            <div class="footer-fa-text">123MovieSite One is a Free Movies streaming site with zero ads.
+                We let you watch movies online without having to register or paying, with over 10000 movies and
+                TV-Series.
+                You can also Download full movies from 123MovieSite One and watch it later if you want.
+            </div>
+            <div class="footer-fa-menu">
+                <a href="/terms" title="Terms of service">Terms of service</a><span class="space">-</span>
+                <a href="/contact" title="Contact">Contact</a><span class="space">-</span>
+                <a href="/sitemap.xml" title="Sitemap">Sitemap</a>
+            </div>
+        </div>
+        <div class="footer-notice">
+            <span>123MovieSite One does not store any files on our server, we only linked to the media which is hosted on 3rd party services.</span>
+        </div>
+        <div class="footer-logo-block">
+            <a href="/" class="footer-logo"><img
+                        src="/images/group_1/theme_7/logo.png" alt="Logo footer"></a>
+            <p class="copyright">© 123MovieSite One</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+    </div>
+    <div class="modal fade premodal premodal-login" id="modallogin" tabindex="-1" role="dialog"
+     aria-labelledby="modallogintitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+</body>
+</html>
